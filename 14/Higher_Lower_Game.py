@@ -6,8 +6,10 @@ import random
 def get_random_data():
     return random.choice(game_data.data)
 
+
 def print_compare(D):
     return f"Compare A: {D["name"]}, {D["description"]}, {D["country"]}"
+
 
 def evaluate(A, B, score):
     end_game = False
@@ -23,6 +25,7 @@ def evaluate(A, B, score):
         end_game = True
         print("Wrong!")
     return end_game, score
+
 
 def game():
     end_game = False
@@ -42,6 +45,7 @@ def game():
         end_game, score = evaluate(A, B, score)
         print(f"Your score is {score}!")
     return score
+
 
 print(game_art.logo)
 game()    
