@@ -4,7 +4,6 @@ df = pandas.read_csv("./26/nato_phonetic_alphabet.csv")
 
 # Create { "A" : "Alpha"}
 data = {row["letter"]: row["code"] for index, row in df.iterrows()}
-print(data)
 
 # Creat a list of NATO code from user inputs
 while True:
