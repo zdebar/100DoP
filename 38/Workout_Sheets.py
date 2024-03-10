@@ -33,7 +33,7 @@ print(response.text) # valid JSON
 today_date = datetime.now().strftime("%d/%m/%Y")
 now_time = datetime.now().strftime("%X")
 
-headers_sheety = {"Authorization": "Bearer MBc29974816768fadfgh"}
+headers_sheety = {}
 
 API_SHEETY_URL = "https://api.sheety.co/3454450ae1d8878aa205be89ffd5177d/workoutsTracking/workouts"
 
