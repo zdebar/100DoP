@@ -15,7 +15,7 @@ headers = {
 }
 
 # today = datetime.now()
-today = datetime(2024,3,9)
+today = datetime.now(0)
 
 
 
@@ -45,10 +45,10 @@ today = datetime(2024,3,9)
 
 # DELETE GRAPH
 
-graph_endpoint = "https://pixe.la/v1/users/zdebar/graphs/graph01"
-response = requests.delete(url=graph_endpoint, headers=headers)
-print(response)
-print(response.text)
+# graph_endpoint = "https://pixe.la/v1/users/zdebar/graphs/graph01"
+# response = requests.delete(url=graph_endpoint, headers=headers)
+# print(response)
+# print(response.text)
 
 
 
@@ -60,12 +60,12 @@ print(response.text)
 
 # POST TO GRAPH
 
-# graph_update = {
-#     "date": today.strftime("%Y%m%d"),
-#     "quantity": "5.5"
-# }
+graph_update = {
+    "date": today.strftime("%Y%m%d"),
+    "quantity": "5.5"
+}
 
-# graph_endpoint = "https://pixe.la/v1/users/zdebar/graphs/graph02"
-# response = requests.post(url=graph_endpoint, json=graph_update, headers=headers)
-# print(response.text)
+graph_endpoint = "https://pixe.la/v1/users/zdebar/graphs/graph02"
+response = requests.post(url=graph_endpoint, json=graph_update, headers=headers)
+print(response.text)
 
