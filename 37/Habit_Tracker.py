@@ -95,7 +95,7 @@ print(response.text)
 
 graph_update = {
     "date": today.strftime("%Y%m%d"),
-    "quantity": "60"
+    "quantity": "0"
 }
 
 graph_endpoint = "https://pixe.la/v1/users/zdebar/graphs/graph04"
@@ -106,7 +106,7 @@ print(response.text)
 
 graph_update = {
     "date": today.strftime("%Y%m%d"),
-    "quantity": "1"
+    "quantity": "5"
 }
 
 graph_endpoint = "https://pixe.la/v1/users/zdebar/graphs/graph05"
@@ -117,7 +117,7 @@ print(response.text)
 
 graph_update = {
     "date": today.strftime("%Y%m%d"),
-    "quantity": "10"
+    "quantity": "3"
 }
 
 graph_endpoint = "https://pixe.la/v1/users/zdebar/graphs/graph06"
