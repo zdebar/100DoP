@@ -1,9 +1,8 @@
-tuple1 = (1, 2, 3, 4, 5)
-tuple2 = (4, 5, 6, 7, 8)
+def binariez(a):
+    assert int(a) == a and int(a) >= 0, "No valid input"
+    if a == 1:
+        return "1"
+    return  binariez(a//2) + str(a % 2)
 
-
-def common_elements(tuple1, tuple2):
-    return tuple(set(tuple1)&set(tuple2))
-
-
-print(common_elements(tuple1, tuple2))
+B
+print(binariez(1156))
