@@ -1,8 +1,5 @@
-def binariez(a):
-    assert int(a) == a and int(a) >= 0, "No valid input"
-    if a == 1:
-        return "1"
-    return  binariez(a//2) + str(a % 2)
+import random
 
-B
-print(binariez(1156))
+a = list(range(8))
+random.shuffle(a)
+print(a)
