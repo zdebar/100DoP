@@ -1,32 +1,33 @@
-import tkinter
-import turtle
+from tkinter import *
 
-window = tkinter.Tk()
-window.title("My First GUI Program")
-window.minsize(width=500, height=400)
-
-# Label
-my_label = tkinter.Label(text="Miles to kilometer convertor", font=("Courier", 16))
-my_label.pack()
-
-# Two options for updating label
-# my_label["text"] = "New text"
-# my_label.config(text="New Text")
-
-# Button
 
 def button_clicked():
-    in_word = input.get()
-    my_label.config(text=in_word)
+    print("I got clicked")
+    new_text = input.get()
+    my_label.config(text=new_text)
 
-button = tkinter.Button(text="Click me", command=button_clicked)
-button.pack()
 
-# Entry
+window = Tk()
+window.title("My First GUI Program")
+window.minsize(width=500, height=300)
+window.config(padx=100, pady=200)
 
-input = tkinter.Entry(width=50)
-input.pack()
+#Label
+my_label = Label(text="I Am a Label", font=("Arial", 24, "bold"))
+my_label.config(text="New Text")
+my_label.grid(column=0, row=0)
+my_label.config(padx=50, pady=50)
 
+#Button
+button = Button(text="Click Me", command=button_clicked)
+button.grid(column=1, row=1)
+
+new_button = Button(text="New Button")
+new_button.grid(column=2, row=0)
+
+#Entry
+input = Entry(width=10)
+print(input.get())
+input.grid(column=3, row=2)
 
 window.mainloop()
-
