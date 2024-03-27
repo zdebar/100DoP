@@ -1,3 +1,29 @@
-lst = [0,1,2,3,4]
+obj = {
+  "stuff": 'foo',
+  "data": {
+    "val": {
+      "thing": {
+        "info": 'bar',
+        "moreInfo": {
+          "evenMoreInfo": {
+            "weMadeIt": 'baz'
+          }
+        }
+      }
+    }
+  }
+}
+ 
+ 
+def collectString(d):
+    collection = []
+    for value in d.values():
+        if isinstance(value, dict):
+            collection += collectString(value)
+        elif isinstance(value, str):
+            collection.append(value)
+    return collection
 
-print(lst[-1:0:-1])
+
+print(collectString(obj))
+
