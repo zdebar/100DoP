@@ -12,6 +12,7 @@ class Graph:
         queue = []
         queue.append([start])
         while queue:
+            print(queue)
             path = queue.pop(0)
             node = path[-1]
             if node == end:
@@ -30,4 +31,4 @@ customDict = { "a" : ["b", "c"],
             }
 
 g = Graph(customDict)
-print(g.bfs("a", "z"))
+print(g.bfs("a", "f"))
