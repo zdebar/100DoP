@@ -16,4 +16,4 @@ def findMinOperation(s1, s2, index1, index2):
         replaceOp = 1 + findMinOperation(s1, s2, index1+1, index2+1)
         return min (deleteOp, insertOp, replaceOp)
 
-print(findMinOperation("table", "tbrltt", 0, 0))
+print(findMinOperation("table", "tbrlt", 0, 0))

@@ -1,1 +1,3 @@
-print(int("inf")+3)
+print(isinstance(True, int))
+print(isinstance(True, float))
+print(isinstance(float("inf"), float))
