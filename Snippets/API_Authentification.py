@@ -15,5 +15,4 @@ parameters = {
 response = requests.get(API_ENDPOINT, params=parameters)
 response.raise_for_status()
 data = response.json()['results']
-print(data)
 

@@ -1,4 +1,2 @@
-import random
-seznam = ("A", "B", "C")
-for i in random.randint(0,1):
+for i in range(1,101):
     print(i)
