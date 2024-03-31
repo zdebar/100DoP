@@ -6,9 +6,9 @@ window.title("Widget Examples")
 window.minsize(width=500, height=500)
 
 #Labels
-label = Label(text="This is old text")
+label = Label(text="This is old text", font=("Arial", 16, "bold"))
 label.config(text="This is new text")
-label.pack()
+label.pack(side="left")
 
 #Buttons
 def action():
@@ -25,6 +25,8 @@ entry.insert(END, string="Some text to begin with.")
 #Gets text in entry
 print(entry.get())
 entry.pack()
+entry.focus() #Enter active cursor
+
 
 #Text
 text = Text(height=5, width=30)
@@ -82,5 +84,14 @@ for item in fruits:
     listbox.insert(fruits.index(item), item)
 listbox.bind("<<ListboxSelect>>", listbox_used)
 listbox.pack()
+
+# Message Box
+
+# Image
+canvas = Canvas(height=200, width=200)
+logo_img = PhotoImage(file="29/logo.png")
+canvas.create_image(100, 100, image=logo_img)
+canvas.grid(row=0, column=1)
+
 window.mainloop()
 
