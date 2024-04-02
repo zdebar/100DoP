@@ -2,9 +2,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
-
-
 def make_bold(function):
     def wrapper():
         return "<b>" + function() + "</b>"
