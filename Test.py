@@ -1,4 +1,5 @@
-a = (1,2)
-b = a
-a = (1,3)
-print(b)
+from math import *
+
+lst = [1,2]
+floor
+
