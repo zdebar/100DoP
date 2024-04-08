@@ -1,11 +1,12 @@
+from collections import Counter
 
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}
 
-def add(x, y):
-    return x + y
+# # Using dictionary comprehension
+# merged_dict = {key: dict1.get(key, 0) + dict2.get(key, 0) for key in set(dict1) | set(dict2)}
 
+# print(merged_dict)  # Output: {'a': 1, 'b': 5, 'c': 4}
 
-# Example usage
-print(add(1, 2))      # Output: 3
-print(add(1.5, 2.5))  # Output: 4.0
-print(add('Hello, ', 'world!'))  # Output: Hello, world!
-
+my_inverted_dict = dict(map(reversed, dict1.items()))
+print(my_inverted_dict)

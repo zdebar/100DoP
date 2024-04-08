@@ -1,13 +1,14 @@
-import getpass
-import requests
+class Parent(object):
+    x = 1
 
-session = requests.Session()
-session.get('http://httpbin.org/cookies/set/mipyt/best')
+class Child1(Parent):
+    pass
 
-r = session.get('http://httpbin.org/cookies')
-print(r.json())
+class Child2(Parent):
+    pass
 
-
-session.headers.update({'x-test': 'true'})
-r = session.get('http://httpbin.org/headers', headers={'x-test2': 'true'})
-print(r.json())
+print (Parent.x, Child1.x, Child2.x)
+Child1.x = 2
+print (Parent.x, Child1.x, Child2.x)
+Parent.x = 3
+print (Parent.x, Child1.x, Child2.x)
